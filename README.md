@@ -1,29 +1,20 @@
-# Next.js + Tailwind CSS Example
+# Daniel's PokeDex #
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v2.2)](https://blog.tailwindcss.com/tailwindcss-2-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+## Used stack ##
+* Next.js
+* Tailwindcss
+* TypeScript
 
-It uses the new [`Just-in-Time Mode`](https://tailwindcss.com/docs/just-in-time-mode) for Tailwind CSS.
+## About ##
+For this little project i was given the [PokeAPI](https://https://pokeapi.co/). 
+The task was to list all Pokemons with an pagination and max 16 Pokemon per site. The API already delivers pagination links, i decided to use Next's getServerSideProps to deliver a first content-paint and then axios to get the data from the API after using the pagination. On the Pokemon detail page i used getServerSideProps to get more data of the Pokemon from the API. The images come from the official [Pokemon webstite](https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png).
 
-## Preview
+## What i could have done better ##
+Due to the set time limit of 4h i felt a little under preassure and therefore wrote a few lines of code which i've could have wrote better with more time, for example:
+* the getColor() function to set the backgroundcolor of each pokemon on the detail page based on it's type
+* the initial data fetching with getServerSideProps instead of axios
+* using more components
+* the typescript interfaces
 
-Preview the example live on [StackBlitz](http://stackblitz.com/):
+I have to say that is was a fun codeing challenge afterall.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
-
-## Deploy your own
-
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
-
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-# or
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
